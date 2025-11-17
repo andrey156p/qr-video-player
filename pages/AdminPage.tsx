@@ -7,7 +7,7 @@ import { useTranslations } from '../i18n/useTranslations';
 
 const AdminPage: React.FC = () => {
   const { t, lang } = useTranslations();
-  const [videoData, setVideoData] = useLocalStorage<VideoData>('videoData', { url: '', isEnabled: false });
+  const [videoData, setVideoData] = useLocalStorage<VideoData>('videoData', { url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4', isEnabled: true });
   const [statsData, setStatsData] = useLocalStorage<StatsData>('statsData', { totalViews: 0 });
   
   const [tempUrl, setTempUrl] = useState(videoData.url);
